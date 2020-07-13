@@ -95,7 +95,7 @@ func changeValue() {
 // TODO
 dispatchPrecondition(condition: .onQueue(mainQueue)) //used to stop execution if you're on the wrong queue
 value = 42
-mySerialQueue.async {
+mySerialQueue.sync {
 	changeValue()
 }
 value
